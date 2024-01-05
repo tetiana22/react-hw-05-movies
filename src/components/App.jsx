@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Layout = lazy(() => import('./Layout/Layout'));
 const HomePage = lazy(() => import('./HomePage/HomePage'));
 const Movies = lazy(() => import('./Movies/Movies'));
-const MovieDetails = lazy(() => import('./MovieDetails/MovieDetails'));
+const MovieDetails = lazy(() => import('./MovieDetails /MovieDetails '));
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('./Reviews/Reviews'));
 

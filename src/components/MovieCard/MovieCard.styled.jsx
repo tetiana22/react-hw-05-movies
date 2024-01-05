@@ -8,8 +8,7 @@ export const MovieCardContainer = styled.div`
 `;
 
 export const Img = styled.img`
-  height: 600px;
-  width: 400px;
+  height: 350px;
 `;
 
 export const MovieInfo = styled.div`

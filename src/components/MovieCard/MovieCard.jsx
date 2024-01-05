@@ -17,7 +17,7 @@ const MovieCard = ({ movie }) => {
     : releaseDate.getFullYear();
 
   const posterUrl = poster_path
-    ? `https://image.tmdb.org/t/p/w400/${poster_path}`
+    ? `https://image.tmdb.org/t/p/w400/${poster_path} `
     : 'https://via.placeholder.com/400x600.png?text=Poster+Not+Available';
 
   const userScore = vote_average
