@@ -34,7 +34,7 @@ const Movies = () => {
   const handleSubmit = query => {
     setSearchParams('query', query);
   };
-  console.log(searchingMovies);
+
   return (
     <Section>
       <SectionTitle>Movies</SectionTitle>

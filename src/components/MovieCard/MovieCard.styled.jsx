@@ -7,10 +7,6 @@ export const MovieCardContainer = styled.div`
   margin-top: 20px;
 `;
 
-export const Img = styled.img`
-  height: 350px;
-`;
-
 export const MovieInfo = styled.div`
   padding-top: 20px;
   max-width: 1100px;

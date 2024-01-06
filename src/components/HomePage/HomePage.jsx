@@ -3,6 +3,7 @@ import Loader from 'components/Loader/Loader';
 import { fetchTrendingMovies } from '../Api/Api';
 import MovieList from '../MovieList/MovieList';
 
+
 const HomePage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -22,8 +23,6 @@ const HomePage = () => {
 
     fetchData();
   }, []);
-
-  console.log(trendingMovies);
 
   return (
     <>

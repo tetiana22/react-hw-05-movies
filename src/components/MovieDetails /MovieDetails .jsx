@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
 import { fetchMovieDetails } from 'components/Api/Api';
 import {
-  ListItem,
-  Section,
-  SectionTitle,
-} from 'components/MovieList/MovieList.styled';
-import { Button, SectionInfo, ListInfo, LinkInfo } from './MovieDetails.styled';
+  Button,
+  SectionInfo,
+  LinkInfo,
+  Li,
+  ListDetails,
+  SectionTitleDetails,
+  SectionDetails,
+} from './MovieDetails.styled';
 import MovieCard from 'components/MovieCard/MovieCard';
 import Loader from 'components/Loader/Loader';
 
@@ -32,26 +35,28 @@ const MovieDetails = () => {
   }, [movieId]);
 
   return (
-    <Section>
-      <Link to={location.state?.from ?? '/'}>
-        <Button type="button">Go back</Button>
-      </Link>
+    <>
       {loading && <Loader />}
-      <MovieCard movie={selectMovie} />
+
+      <SectionDetails>
+        <Link to={location.state?.from ?? '/'}>
+          <Button type="button">Go back</Button>
+        </Link>
+        <MovieCard movie={selectMovie} />
+      </SectionDetails>
       <SectionInfo>
-        <SectionTitle>Additional information</SectionTitle>
-        <ListInfo>
-          <ListItem>
+        <SectionTitleDetails>Additional information</SectionTitleDetails>
+        <ListDetails>
+          <Li>
             <LinkInfo to="cast">Cast</LinkInfo>
-          </ListItem>
-          <ListItem>
+          </Li>
+          <Li>
             <LinkInfo to="reviews">Reviews</LinkInfo>
-          </ListItem>
-        </ListInfo>
-        <hr />
+          </Li>
+        </ListDetails>
         <Outlet />
       </SectionInfo>
-    </Section>
+    </>
   );
 };
 

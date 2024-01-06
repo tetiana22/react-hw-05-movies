@@ -10,4 +10,16 @@ export const NoReviewsText = styled.p`
   max-width: 500px;
 `;
 
-export const Text = styled.p``;
+export const Text = styled.p`
+  font-size: 16px;
+  font-weight: 400;
+`;
+
+export const Name = styled.h2`
+  font-size: 20px;
+  font-weight: 400;
+  color: #1c85ff;
+`;
+export const Li = styled.li`
+  margin-bottom: 40px;
+`;

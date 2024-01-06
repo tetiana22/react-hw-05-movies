@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
   padding: 20px 30px;
-  text-align: center;
   box-shadow: 0px 4px 4px #d3d3d3;
+  background-color: #0d253f;
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -13,16 +13,14 @@ export const StyledNavLink = styled(NavLink)`
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
-  color: #000000;
-
-  &:not(:last-child) {
-    margin-right: 40px;
-  }
-
+  color: #fff;
+  margin-right: 20px;
   &.active,
   &:hover,
   &:focus {
     color: #1c85ff;
-    text-decoration: underline;
   }
+`;
+export const Nav = styled.nav`
+  margin-left: 60px;
 `;

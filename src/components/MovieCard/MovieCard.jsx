@@ -1,5 +1,4 @@
 import {
-  Img,
   MovieCardContainer,
   MovieInfo,
   MovieInfoText,
@@ -26,7 +25,7 @@ const MovieCard = ({ movie }) => {
   return (
     <>
       <MovieCardContainer>
-        <Img src={posterUrl} alt={`${title} poster`} />
+        <img src={posterUrl} alt={`${title} poster`} />
 
         <MovieInfo>
           <MovieName>

@@ -4,25 +4,28 @@ import { Link } from 'react-router-dom';
 export const Section = styled.section`
   padding-right: 50px;
   padding-left: 50px;
+  margin-top: 10px;
 `;
 
 export const SectionTitle = styled.h2`
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-left: 5px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   text-align: center;
+  color: #1c85ff;
+  padding-left: 50px;
 `;
 
 export const List = styled.ul`
-  list-style: disc;
-  color: #0d57aa;
+  list-style: none;
+  color: #fff;
 `;
 
 export const ListItem = styled.li`
+  display: flex;
+  gap: 30px;
+  jystify-content: centre;
   &:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -37,4 +40,3 @@ export const StyledLink = styled(Link)`
     border-bottom: 2px solid #1c85ff;
   }
 `;
-
