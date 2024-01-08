@@ -37,9 +37,8 @@ const MovieDetails = () => {
   return (
     <>
       {loading && <Loader />}
-
       <SectionDetails>
-        <Link to={location.state?.from ?? '/'}>
+        <Link to={location?.state?.from ?? '/'}>
           <Button type="button">Go back</Button>
         </Link>
         <MovieCard movie={selectMovie} />

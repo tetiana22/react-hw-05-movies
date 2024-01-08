@@ -1,19 +1,20 @@
-import {
-  Section,
-  List,
-  ListItem,
-  StyledLink,
-} from '../MovieList/MovieList.styled';
+import { Section, List, ListItem } from '../MovieList/MovieList.styled';
+import { Link, useLocation } from 'react-router-dom';
 
 const SeachMovieList = ({ searchingMovies }) => {
+  const location = useLocation();
+
   return (
     <Section>
       <List>
         {searchingMovies.map(searchingMovie => (
           <ListItem key={searchingMovie.id}>
-            <StyledLink to={`/movies/${searchingMovie.id}`}>
+            <Link
+              to={`/movies/${searchingMovie.id}`}
+              state={{ from: location }}
+            >
               {searchingMovie.title}
-            </StyledLink>
+            </Link>
           </ListItem>
         ))}
       </List>
