@@ -1,4 +1,5 @@
 import { Section, List, ListItem } from '../MovieList/MovieList.styled';
+
 import { Link, useLocation } from 'react-router-dom';
 
 const SeachMovieList = ({ searchingMovies }) => {
