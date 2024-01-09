@@ -18,6 +18,7 @@ const MovieDetails = () => {
   const location = useLocation();
   const [selectMovie, setSelectMovie] = useState([]);
   const [loading, setLoading] = useState(false);
+  const backBtn = location?.state?.from ?? '/';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +39,7 @@ const MovieDetails = () => {
     <>
       {loading && <Loader />}
       <SectionDetails>
-        <Link to={location?.state?.from ?? '/'}>
+        <Link to={backBtn}>
           <Button type="button">Go back</Button>
         </Link>
         <MovieCard movie={selectMovie} />
@@ -47,10 +48,14 @@ const MovieDetails = () => {
         <SectionTitleDetails>Additional information</SectionTitleDetails>
         <ListDetails>
           <Li>
-            <LinkInfo to="cast">Cast</LinkInfo>
+            <LinkInfo to="cast" state={{ from: backBtn }}>
+              Cast
+            </LinkInfo>
           </Li>
           <Li>
-            <LinkInfo to="reviews">Reviews</LinkInfo>
+            <LinkInfo to="reviews" state={{ from: backBtn }}>
+              Reviews
+            </LinkInfo>
           </Li>
         </ListDetails>
         <Outlet />
