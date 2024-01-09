@@ -5,11 +5,10 @@ import {
   MovieInfoTextBold,
   MovieName,
 } from './MovieCard.styled';
-import { useLocation } from 'react-router-dom';
+
 const MovieCard = ({ movie }) => {
   const { title, overview, genres, poster_path, vote_average, release_date } =
     movie;
-  const location = useLocation();
   const releaseDate = new Date(release_date);
 
   const releaseYear = isNaN(releaseDate)
